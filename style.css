@@ -35,6 +35,10 @@ nav {
   font-weight: bold;
 }
 
+.nav-color {
+  background: linear-gradient(45deg, #f5497e, #b013ac);
+}
+
 nav ul {
   display: flex;
   list-style: none;
