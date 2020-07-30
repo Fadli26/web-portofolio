@@ -67,6 +67,10 @@ section {
 section .section-title {
   margin-bottom: 50px;
   font-size: 64px;
+  background: linear-gradient(45deg, #f5497e, #b013ac);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  width: max-content;
 }
 
 #about {
