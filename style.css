@@ -51,7 +51,7 @@ nav ul li a:hover {
   color: var(--color);
 }
 
-section {
+article {
   padding: 0px 7rem;
   height: 100vh;
   display: flex;
@@ -60,9 +60,13 @@ section {
   text-transform: uppercase;
 }
 
-section .section-title {
+article .article-title {
   margin-bottom: 50px;
   font-size: 64px;
+  width: max-content;
+  background: linear-gradient(45deg, #f5497e, #793376);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #about {
@@ -102,17 +106,17 @@ section .section-title {
   content: "  ·  ";
 }
 
-section .card {
+article .card {
   font-size: 24px;
   margin-bottom: 50px;
   position: relative;
 }
 
-section .card h3 {
+article .card h3 {
   font-weight: lighter;
 }
 
-section .card-date {
+article .card-date {
   position: absolute;
   top: 0;
   right: 0;
