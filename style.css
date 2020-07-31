@@ -4,8 +4,8 @@ html {
 
 :root {
   --scolor: #1a63b6;
-  --color: #1E57D7;
-  --color: #729FCF;
+  --color: #1e57d7;
+  --color: #729fcf;
 }
 
 * {
@@ -16,27 +16,23 @@ html {
 
 body {
   background: #121212;
-  font-family: 'source sans pro';
+  font-family: "source sans pro";
   color: #fff;
+  overflow-x: hidden;
 }
 
 nav {
   position: fixed;
   width: 100vw;
-  z-index: 1;
-  /* background: linear-gradient(to right, #1A63B6, #3888E3); */
+  background: linear-gradient(to right, #1a63b6, #3888e3);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 1em 120px;
-  font-family: montserrat;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: bold;
-}
-
-.nav-color {
-  background: linear-gradient(45deg, #f5497e, #b013ac);
 }
 
 nav ul {
@@ -67,17 +63,13 @@ section {
 section .section-title {
   margin-bottom: 50px;
   font-size: 64px;
-  background: linear-gradient(45deg, #f5497e, #b013ac);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  width: max-content;
 }
 
 #about {
   /* height: 90vh; */
   background: linear-gradient(#7b3158, #221031);
   background: linear-gradient(45deg, #d03ae7, #228294);
-  background: linear-gradient(45deg, #f5497e, #b013ac);
+  background: linear-gradient(45deg, #f5497e, #793376);
 }
 
 #about h1 {
@@ -107,7 +99,7 @@ section .section-title {
 
 #about .bio li:nth-child(1)::after,
 #about .bio li:nth-child(2)::after {
-  content: '  ·  ';
+  content: "  ·  ";
 }
 
 section .card {
@@ -126,4 +118,52 @@ section .card-date {
   right: 0;
   font-size: 18px;
   color: var(--color);
+}
+
+/* hamburger menu */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    transform: translateY(-100%);
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background: linear-gradient(to right, #1a63b6, #3888e3);
+    width: 100%;
+    padding: 50px 0;
+    height: 60vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
