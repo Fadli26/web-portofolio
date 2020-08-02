@@ -37,7 +37,8 @@ nav {
 }
 
 .nav-color {
-  background: linear-gradient(45deg, #f5497e, #793376);
+  /* background: linear-gradient(45deg, #f5497e, #793376); */
+  background-color: royalblue;
 }
 
 nav ul {
@@ -207,7 +208,6 @@ article .card-date {
   #about h1 {
     font-size: 48px;
   }
-
 
   nav {
     padding: 1em 2em;
